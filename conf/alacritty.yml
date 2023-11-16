@@ -1,0 +1,73 @@
+# Alacritty configuration for terminals overlayed by tmux sessions.
+
+bell:
+  # Visual bell animation.
+  animation: EaseOutQuint
+  duration: 5
+  color: '#d7d7d7'
+
+colors:
+  # Standard colors, matching rxvt.
+  primary:
+    background: '#121212'
+    foreground: '#d7d7d7'
+
+  normal:
+    black:   '#000000'
+    red:     '#cd0000'
+    green:   '#00cd00'
+    yellow:  '#cdcd00'
+    blue:    '#0000cd'
+    magenta: '#cd00cd'
+    cyan:    '#00cdcd'
+    white:   '#faebd7'
+
+  bright:
+    black:   '#404040'
+    red:     '#ff0000'
+    green:   '#00ff00'
+    yellow:  '#ffff00'
+    blue:    '#0000ff'
+    magenta: '#ff00ff'
+    cyan:    '#00ffff'
+    white:   '#ffffff'
+
+env:
+  # alacritty as TERM needs the
+  # termcap entry to be available.
+  TERM: alacritty
+
+font:
+  # Font family.
+  normal:
+    family: Kiwi Mono
+    style: Regular
+
+  # Font size.
+  size: 11.0
+
+mouse:
+  # No mouse cursor when typing.
+  hide_when_typing: true
+
+scrolling:
+  # No back buffer, it's handled by tmux.
+  history: 0
+
+url:
+    # URL launcher.
+    launcher:
+      program: xdg-open
+      args: []
+
+window:
+  # Initial window size.
+  dimensions:
+    columns: 79
+    lines: 24
+
+  # Light window decorations.
+  decorations_theme_variant: Light
+
+  # Center the terminal content.
+  dynamic_padding: true
